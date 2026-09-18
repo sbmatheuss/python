@@ -9,3 +9,13 @@ popped_motos = motos.pop(1)
 print(popped_motos)
 
 
+# RESUMINDO:
+# PRECISA USAR O ITEM DEPOIS DE REMOVER? USE - pop()
+# QUER SOMENTE REMOVER? USE - del
+
+
+# remove() -> remove pelo valor do elemento da lista, não pelo índice
+
+bikes = ['chimano', 'bmx']
+bikes.remove('chimano') # remove o elemento da lista pelo valor
+print(bikes)
