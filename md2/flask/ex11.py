@@ -3,7 +3,7 @@ from flask import Flask,render_template
 app = Flask(__name__)
 
 @app.route("/saudacao")
-def maiorI():
+def saudacao():
   nome = "Bruno"
   idade = 25
   return render_template("saudacao.html", nome=nome, idade=idade)
