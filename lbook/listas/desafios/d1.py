@@ -36,10 +36,10 @@ print(convidados)
 print(f'Bem vindo novamente sr {convidados[0]}')
 print(f'Bem vindo novamente sr {convidados[1]}')
 
-
+# nesse caso o del também remove e muda o total da lista a cada nova chamada
 del convidados[0] # remove da lista
 del convidados[0] # remove da lista
 
-print(convidados)
+print(convidados) # retorna a lista vazia
 
 
