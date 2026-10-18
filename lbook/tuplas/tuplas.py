@@ -1,0 +1,8 @@
+dimension = (200, 50)
+print(dimension[0])
+ # TUPLA É IMUTÁVEL - NÃO ACEITA NOVOS ELEMENTOS E NEM QUE OS ELEMENTOS
+ # JÁ INSERIDOS NELA SEJAM REMOVIDOS 
+ # dimension[0] = 250 -> NÃO ACEITÁVEL PELA TUPLA 
+
+
+ 
