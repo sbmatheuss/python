@@ -4,5 +4,3 @@ print(dimension[0])
  # JÁ INSERIDOS NELA SEJAM REMOVIDOS 
  # dimension[0] = 250 -> NÃO ACEITÁVEL PELA TUPLA 
 
-
- 
