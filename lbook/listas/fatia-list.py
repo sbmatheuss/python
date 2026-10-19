@@ -1,12 +1,16 @@
-# fatiando uma lista
+# fatiando uma lista: lista[inicio:fim] -> pega de "inicio" ATÉ "fim", sem incluir "fim"
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
-print(players[0:3]) # fatia a lista e exibe os 3 primeiros players.
+#           índice 0     1          2          3           4
+print(players[0:3])  # ['charles', 'martina', 'michael'] -> índices 0, 1 e 2 (o 3 fica de fora)
 
+# índice negativo conta de trás pra frente: -1 é o último, -2 o penúltimo...
 frutas = ['pera', 'melão', 'morango', 'kiwi']
-print(frutas[:-3]) #  "fatia do início até o índice −3, sem incluir o −3"
+#          índice  0       1        2          3
+#          negativo -4     -3       -2         -1
+print(frutas[:-3])  # ['pera'] -> do início até antes do -3 ('melão')
 
 frase = ['I', '','a', 'm', '', 'J', 'a', 's', 'p', 'r', 'e', 'e', 't']
-print(frase[2:10:2]) 
+print(frase[2:10:2])
 
 vogais = ['a','b','c','a','b','c','a','b','c']
 print(vogais[:5:3])
@@ -20,4 +24,4 @@ print(matrix[1][1:])
 
 games = ['overwatch', 'batman', 'GTA V']
 for game in games[:2]: # percorre a lista inteira de games e fatia
-    print(game.title()) 
+    print(game.title())
