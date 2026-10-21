@@ -5,6 +5,6 @@ if velocidade > 80:
     excesso = velocidade - 80
     multa = excesso * valor_km
     print(f'VOCÊ FOI MULTADO: {velocidade}Km/h')
-    print(f'Valor da MULTA: R${multa:2}')
+    print(f'Valor da MULTA: R${multa:.2f}')
 else:
     print('Você está dentro do limite de Velocidade')
