@@ -1,45 +1,38 @@
 convidados = ['henrique', 'joão', 'pedro'] # lista de convidados
-print(f'Bem vindo ao jantar {convidados[0]}')
-print(f'Bem vindo ao jantar {convidados[1]}')
-print(f'Bem vindo ao jantar {convidados[2]}')
-print(f'O convidado {convidados[1]} não irá comparecer ao jantar')
-print(f'Senhores convidados, solicitei uma mesa maior')
 
-del convidados[1] # remove o segundo convidado da lista
-convidados.insert(1, 'Matheus') # insere um novo convidado na lista
-print(convidados)
-print(f'Bem vindo ao jantar senhor {convidados[0]}')
-print(f'Deguste do nosso jantar senhor {convidados[1]}')
-print(f'Seja bem vindo senhor {convidados[2]}')
+for convidado in convidados: # convida todos da lista, sem precisar de índice
+    print(f'Bem vindo ao jantar {convidado.title()}')
 
-convidados.insert(0, 'kaik') # acrescente um novo convidado a lista
-convidados.insert(1, 'leo')# acrescente um novo convidado a lista
-convidados.append('bruno')# acrescente um novo convidado a lista
+# um convidado não poderá comparecer e será substituído
+ausente = convidados[1]
+print(f'\nO convidado {ausente.title()} não irá comparecer ao jantar')
+convidados[1] = 'matheus' # substitui o convidado ausente na mesma posição
 
-print(f'Bem vindo ao jantar sr {convidados[0]}')
-print(f'Bem vindo ao jantar sr {convidados[1]}')
-print(f'Bem vindo ao jantar sr {convidados[5]}')
+for convidado in convidados: # envia os convites novamente com a lista atualizada
+    print(f'Bem vindo ao jantar senhor {convidado.title()}')
 
-print(f'Comunicado: a nova mesa solicitada tem espaço somente para 2 lugares')
-print(convidados)
+print('\nSenhores convidados, encontrei uma mesa maior!')
+convidados.insert(0, 'kaik') # acrescenta um convidado no início da lista
+convidados.insert(len(convidados) // 2, 'leo') # acrescenta um convidado no meio da lista
+convidados.append('bruno') # acrescenta um convidado no final da lista
 
-# sempre que o pop() remove um convidado da lista, a cada chamada o total
-# de convidados muda, exemplo: na primeira chamada abaixo, o total da lista é
-# de 5 convidados, porém quando executa o pop() novamente, o total muda para 4
+for convidado in convidados: # agora todos os 6 convidados recebem o convite
+    print(f'Bem vindo ao jantar sr {convidado.title()}')
 
-convidados.pop(0) # remove um convidado da lista
-convidados.pop(1) # remove um convidado da lista
-convidados.pop(2) # remove um convidado da lista 
-convidados.pop(0) # remove um convidado da lista
+print('\nComunicado: a nova mesa tem espaço somente para 2 lugares')
 
-print(convidados)
-print(f'Bem vindo novamente sr {convidados[0]}')
-print(f'Bem vindo novamente sr {convidados[1]}')
+# enquanto houver mais de 2 convidados, o pop() remove o último da lista
+# e devolve o nome removido, que fica guardado na variável removido
+while len(convidados) > 2:
+    removido = convidados.pop()
+    print(f'Desculpe {removido.title()}, não teremos lugar para você no jantar')
 
-# nesse caso o del também remove e muda o total da lista a cada nova chamada
-del convidados[0] # remove da lista
-del convidados[0] # remove da lista
+for convidado in convidados: # avisa os 2 convidados que continuam na lista
+    print(f'Bem vindo novamente sr {convidado.title()}, você continua convidado')
+
+# o del remove o elemento da posição 0; como a lista "anda" a cada remoção,
+# a posição 0 sempre aponta para o próximo convidado
+while convidados:
+    del convidados[0]
 
 print(convidados) # retorna a lista vazia
-
-
