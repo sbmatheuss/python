@@ -5,7 +5,7 @@ rios = {
 }
 
 # laço que exibe uma frase sobre cada rio
-for rio in rios:
+for rio, pais in rios.items():
     if rio == 'nilo':
         print('O Nilo corre pelo Egito')
     elif rio == 'amazonas':
